@@ -4,30 +4,21 @@ import org.apache.spark.sql.DataFrame
 import play.api.mvc._
 
 /**
- * @author Alexandre Masselot.
+ * @author Daniel Voigt Godoy.
  */
 object HelloController extends Controller {
-  val dataFile = "resources/tweet-json"
-  lazy val rdd = SparkCommons.sqlContext.read.json(dataFile)
+  lazy val rdd = SparkCommons.sc.parallelize(1 to 1000)
 
   def index = Action {
     Ok("hello world")
   }
 
   /**
-   * dataframe can output, with toJSON, a list of json string. They just need to be wrapped with [] and commas
-   * @param rdd
-   * @return
-   */
-  def toJsonString(rdd:DataFrame):String =
-    "["+rdd.toJSON.collect.toList.mkString(",\n")+"]"
-
-  /**
    * number of elements
    * @return
    */
   def count = Action {
-    Ok(rdd.count.toString)
+    Ok(rdd.count().toString)
   }
 
   /**
@@ -35,15 +26,15 @@ object HelloController extends Controller {
    * @return
    */
   def list = Action {
-    Ok(toJsonString(rdd))
+    Ok(rdd.collect().toList.toString)
   }
 
   /**
-   * make a fileter action on the dataframe element "text" field
-   * @param text
+   * make a filter action on the rdd and returns the sum of the remaining numbers
+   * @param n
    * @return
    */
-  def filter(text:String) = Action {
-    Ok(toJsonString(rdd.filter(rdd("text").contains(text))))
+  def sum(n:String) = Action {
+    Ok(rdd.filter(_ <= n.toInt).sum().toString)
   }
 }

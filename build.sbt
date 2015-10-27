@@ -3,11 +3,9 @@ import play.sbt.routes.RoutesKeys._
 
 
 name         := "spark-play-activator"
-organization := "ch.alexmass"
+organization := "com.dvgodoy"
 version      := "0.0.1"
 scalaVersion := Version.scala
-
-
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
@@ -24,5 +22,3 @@ releaseSettings
 scalariformSettings
 
 ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
-
-//routesGenerator := InjectedRoutesGenerator
