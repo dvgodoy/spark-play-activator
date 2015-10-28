@@ -1,7 +1,7 @@
 Spark + Play activator template
 ===============================
 
-This is a [Typesafe Activator](http://typesafe.com/platform/getstarted) template to demonstrate [Apache Spark](http://spark.apache.org) and Play.
+This is a [Typesafe Activator](http://typesafe.com/platform/getstarted) template to demonstrate [Apache Spark](http://spark.apache.org) and [Play Framework](http://www.playframework.com/).
 
 # Motivation
 
