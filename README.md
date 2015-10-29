@@ -5,9 +5,9 @@ This is a [Typesafe Activator](http://typesafe.com/platform/getstarted) template
 
 # Motivation
 
-The original template was modified so it could be run with Spark in standalone cluster mode.
+The original template by Alex Masselot  was modified so it could be run with Spark in standalone cluster mode.
 
-In app/demo/SparkCommons, change <MASTER_IP> and <MASTER_PORT> to your corresponding Spark Master configurations.
+In app/demo/SparkCommons, change MASTER_IP and MASTER_PORT to your corresponding Spark Master configurations.
 
 # Pre-Requisites
 
