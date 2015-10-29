@@ -24,7 +24,8 @@ object SparkCommons {
   //build the SparkConf  object at once
   lazy val conf = {
     new SparkConf(false)
-      .setMaster("spark://<MASTER_IP>:<MASTER_PORT>")
+      //.setMaster("spark://<MASTER_IP>:<MASTER_PORT>")
+      .setMaster("spark://MONSTER:7077")
       .setAppName("play demo")
       .set("spark.logConf", "true")
       .setJars(libs)
