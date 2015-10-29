@@ -1,7 +1,7 @@
 Spark + Play activator template
 ===============================
 
-This is a [Typesafe Activator](http://typesafe.com/platform/getstarted) template to demonstrate [Apache Spark](http://spark.apache.org) and Play.
+This is a [Typesafe Activator](http://typesafe.com/platform/getstarted) template to demonstrate [Apache Spark](http://spark.apache.org) and [Play Framework](http://www.playframework.com/).
 
 # Motivation
 
@@ -68,6 +68,7 @@ Do not forget to start Spark master and slaves (you may use ./sbin/start-all.sh 
 This is a very simple application which creates an RDD containing all numbers from 1 to 1000.
 
 You may check for the total number of elements in the RDD with [http://localhost:9000/count](http://localhost:9000/count), show them all with [http://localhost:9000/list](http://localhost:9000/list) or calculate the sum of the first 10 numbers with [http://localhost:9000/sum/10](http://localhost:9000/sum/10). Please note that 10 is parameter which you can change to calculate the sum up to a different number.
+<<<<<<< HEAD
 
 # Author
 
