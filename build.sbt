@@ -1,6 +1,3 @@
-import play.sbt.PlayImport._
-import play.sbt.routes.RoutesKeys._
-
 
 name         := "spark-play-activator"
 organization := "com.dvgodoy"
@@ -14,7 +11,8 @@ scalaSource in Compile <<= baseDirectory / "src/scala"
 libraryDependencies ++= Dependencies.sparkAkkaHadoop
 
 dependencyOverrides ++= Set(
-  "com.fasterxml.jackson.core" % "jackson-databind" % "2.4.4"
+  "com.fasterxml.jackson.core" % "jackson-databind" % "2.4.4",
+  "com.google.guava" % "guava" % "11.0.2"
 )
 
 releaseSettings
